@@ -1,0 +1,6 @@
+I001-2001,Medal of Honour 3,Game,1-week,1,3.99,borrowed
+I002-1988,White Castle,Record,1-week,3,0.99,Comedy,available
+I003-1992,Alpha Dog,Record,1-week,0,1.99,Action,available
+I004-1999,Rat Race,DVD,1-week,1,1.99,Horror,borrowed
+I005-2015,Halo,Game,2-day,1,4.99,borrowed
+I006-2013,Halloween,DVD,2-day,0,0.99,Horror,available

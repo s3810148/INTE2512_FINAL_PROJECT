@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inte2512finalproject.CustomerController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="201.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="700.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="395.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToItemManager" prefHeight="43.0" prefWidth="132.0" text="Item manager">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="52.0" layoutY="15.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="132.0" style="-fx-background-color: #fccd4c;" text="Customer manager">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="44.0" layoutY="78.0" mnemonicParsing="false" onAction="#logout" prefHeight="43.0" prefWidth="132.0" text="Log out">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="lb_loginAs" text="Login as: ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="150.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <TextField fx:id="txt_search" onKeyReleased="#searchCustomer" prefHeight="37.0" prefWidth="421.0" promptText="search customer" />
+            <ChoiceBox fx:id="choice_group" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ChoiceBox>
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <TableView fx:id="table" prefHeight="358.0" prefWidth="676.0">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="col_name" prefWidth="94.0" text="name" />
+                  <TableColumn fx:id="col_address" prefWidth="167.0" text="address" />
+                  <TableColumn fx:id="col_phone" prefWidth="125.0" text="phone" />
+                  <TableColumn fx:id="col_type" prefWidth="105.0" text="customerType" />
+                  <TableColumn fx:id="col_number" prefWidth="109.0" text="numberOfRentals" />
+              </columns>
+            </TableView>
+            <Pane prefHeight="167.0" prefWidth="676.0">
+               <children>
+                  <Label layoutX="42.0" layoutY="41.0" text="Update customer type">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="choice_typeCustomer" layoutX="212.0" layoutY="39.0" prefWidth="150.0" />
+                  <Button layoutX="394.0" layoutY="40.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="158.0" text="Update" />
+                  <Separator layoutX="-1.0" orientation="VERTICAL" prefHeight="102.0" prefWidth="6.0" />
+                  <Button fx:id="btn_listItem" layoutX="576.0" layoutY="39.0" mnemonicParsing="false" onAction="#getListItemOfCustomer" text="Items rented" />
+               </children></Pane>
+         </children>
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+      </VBox>
+   </children>
+</GridPane>

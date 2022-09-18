@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.inte2512finalproject.CustomerForUserController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="201.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="700.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="395.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToItemManager" prefHeight="43.0" prefWidth="132.0" style="-fx-background-color: #fccd4c;" text="Items rented">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="52.0" layoutY="15.0" mnemonicParsing="false" onAction="#switchToListItem" prefHeight="43.0" prefWidth="132.0" text="List Item">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="44.0" layoutY="78.0" mnemonicParsing="false" onAction="#logout" prefHeight="43.0" prefWidth="132.0" text="Log out">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="lb_loginAs" text="Login as: ">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="150.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <TextField fx:id="txt_search" onKeyReleased="#searchItem" prefHeight="37.0" prefWidth="421.0" promptText="search item" />
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="5.0" />
+         </GridPane.margin>
+         <children>
+            <TableView fx:id="table" prefHeight="358.0" prefWidth="676.0">
+               <columns>
+                  <TableColumn fx:id="col_id" prefWidth="94.0" text="Id" />
+                  <TableColumn fx:id="col_title" prefWidth="146.0" text="title" />
+                  <TableColumn fx:id="col_type" prefWidth="105.0" text="type" />
+                  <TableColumn fx:id="col_subType" prefWidth="124.0" text="subType" />
+                  <TableColumn fx:id="col_loantype" prefWidth="89.0" text="loanType" />
+                  <TableColumn fx:id="col_fee" prefWidth="112.0" text="rentalFee" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</GridPane>
